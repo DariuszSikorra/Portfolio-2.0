@@ -1,0 +1,281 @@
+* body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: "Kodchasan", sans-serif;
+  overflow: hidden;
+}
+
+* body .block {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+}
+
+* body .block img {
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  padding: 30px;
+  -webkit-transition: -webkit-transform 0.5s ease-out;
+  transition: -webkit-transform 0.5s ease-out;
+  transition: transform 0.5s ease-out;
+  transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
+}
+
+* body .block img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+* body .block h1 {
+  font-family: "Abril Fatface", cursive;
+  padding: 10px;
+  -webkit-transition: font-size 0.25s ease-out;
+  transition: font-size 0.25s ease-out;
+}
+
+* body .block p {
+  padding: 10px;
+}
+
+* body #header {
+  background-color: black;
+  color: white;
+  top: 0;
+  width: 100vw;
+}
+
+* body #header .separator {
+  background-color: white;
+  margin: auto;
+  height: 4px;
+  width: 70vw;
+  border-radius: 4px;
+}
+
+* body #header .toSummary {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50vw - 25px);
+  bottom: 40px;
+  background-color: white;
+}
+
+* body #summary {
+  background-color: white;
+  color: black;
+}
+
+* body #summary .separator {
+  background-color: black;
+  margin: auto;
+  height: 4px;
+  width: 70vw;
+  border-radius: 4px;
+}
+
+* body #summary .toHome {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50vw - 25px);
+  background-color: black;
+  bottom: 70px;
+}
+
+* body #summary .toTechnologies {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50vw - 25px);
+  background-color: black;
+  bottom: 10px;
+}
+
+* body #technologies {
+  background-color: black;
+  color: white;
+}
+
+* body #technologies .separator {
+  background-color: white;
+  margin: auto;
+  height: 4px;
+  width: 70vw;
+  border-radius: 4px;
+}
+
+* body #technologies table {
+  padding: 10px;
+  margin: 0 auto;
+}
+
+* body #technologies table th {
+  border-bottom: 2px solid white;
+}
+
+* body #technologies .toSummary {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50vw - 25px);
+  background-color: white;
+  bottom: 70px;
+}
+
+* body #technologies .toInterests {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50vw - 25px);
+  background-color: white;
+  bottom: 10px;
+}
+
+* body #interests {
+  background-color: white;
+  color: black;
+}
+
+* body #interests .separator {
+  background-color: black;
+  margin: auto;
+  height: 4px;
+  width: 70vw;
+  border-radius: 4px;
+}
+
+* body #interests .toTechnologies {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50vw - 25px);
+  background-color: black;
+  bottom: 70px;
+}
+
+* body #interests .toProjects {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50vw - 25px);
+  background-color: black;
+  bottom: 10px;
+}
+
+* body #projects {
+  background-color: black;
+  color: white;
+}
+
+* body #projects .separator {
+  background-color: white;
+  margin: auto;
+  height: 4px;
+  width: 70vw;
+  border-radius: 4px;
+}
+
+* body #projects a {
+  color: white;
+}
+
+* body #projects .toInterests {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50vw - 25px);
+  background-color: white;
+  bottom: 70px;
+}
+
+* body #projects .toContact {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50vw - 25px);
+  background-color: white;
+  bottom: 10px;
+}
+
+* body #contact {
+  background-color: white;
+  color: black;
+}
+
+* body #contact .separator {
+  background-color: black;
+  margin: auto;
+  height: 4px;
+  width: 70vw;
+  border-radius: 4px;
+}
+
+* body #contact .desktop {
+  display: none;
+}
+
+* body #contact .mobile {
+  text-align: left;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  display: inline;
+}
+
+* body #contact .mobile span {
+  display: none;
+}
+
+* body #contact .toProjects {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  border-radius: 50%;
+  left: calc(50vw - 25px);
+  background-color: black;
+  bottom: 40px;
+}
+
+.slide-in {
+  -webkit-animation: slide-in 1s ease forwards;
+          animation: slide-in 1s ease forwards;
+}
+
+@-webkit-keyframes slide-in {
+  from {
+    -webkit-transform: translateY(100vw);
+            transform: translateY(100vw);
+    visibility: visible;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    -webkit-transform: translateY(100vw);
+            transform: translateY(100vw);
+    visibility: visible;
+  }
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+/*# sourceMappingURL=style.css.map */

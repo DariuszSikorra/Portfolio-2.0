@@ -1,0 +1,21 @@
+Założenia:
+- strona ma  być singlapage'm,
+- kolejne sekcje mają się rizwijać po kolei, odsłaniając kolejne segmenty,
+- sterowanie przewijaniem sekcji ma się odbywac za pośrednictwej rolki myszy, lub spacji, a także przycisku widocznego na sterowanie,
+- sekcje posiadać będą wyśrodkowaną zawartość: tekst z informacjami, zdjęcie/gif i przycisk przewijania, 
+- mają także posiadać formę "koperty, czyli być oste z dołu (tak, gdzie został umiejscowiony przycisk),
+- na stronie z projektami zostawić notę czym się obecnie zajmuję i wyświetlić przycisk do podstrony z projektami/kafelkami,
+- ostatnia strona będzie zawierała informacje kontaktowe.
+
+Kierować się zasadą Mobile Friendly, zaczynając projektować od najmniejszych wyświetlaczy.
+Kolejnośc wykonywania działać przy tworzeniu:
+- stworzyć stosowny dokument tekstowy w pliku html,
+- rozmieścic wszystkie informacje za pomocą cssa,
+- zbudowac system przechodzenia między segmentami za pośrednictwej css'a i js'a.
+
+
+Podstrona z kafelkami:
+- każda z kafelek posiadać będzie gif przedsstawiający działanie strony, link po githuba apki, oraz krótka notę streszczającą czego owa apka dotyczy,
+- gif będzie linkiem do strony aplikacji
+- strony nie postawione na żadnym serwerze będą posiadały stosowną notę, oraz link do githuba z kodem.
+
