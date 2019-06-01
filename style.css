@@ -21,6 +21,11 @@
   transition: -webkit-transform 0.5s ease-out;
   transition: transform 0.5s ease-out;
   transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
+  opacity: 0;
+  -webkit-animation: opacity-change 2s ease forwards;
+          animation: opacity-change 2s ease forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 * body .block img:hover {
@@ -31,12 +36,36 @@
 * body .block h1 {
   font-family: "Abril Fatface", cursive;
   padding: 10px;
-  -webkit-transition: font-size 0.25s ease-out;
-  transition: font-size 0.25s ease-out;
+  opacity: 0;
+  -webkit-animation: opacity-change 2s ease forwards;
+          animation: opacity-change 2s ease forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 * body .block p {
   padding: 10px;
+  opacity: 0;
+  -webkit-animation: opacity-change 2s ease forwards;
+          animation: opacity-change 2s ease forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+* body .block h2 {
+  opacity: 0;
+  -webkit-animation: opacity-change 2s ease forwards;
+          animation: opacity-change 2s ease forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+* body .block table {
+  opacity: 0;
+  -webkit-animation: opacity-change 2s ease forwards;
+          animation: opacity-change 2s ease forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 * body #header {
@@ -240,6 +269,11 @@
   display: none;
 }
 
+* body #contact .desktop a img, * body #contact .mobile a img {
+  width: 40px;
+  height: 40px;
+}
+
 * body #contact .toProjects {
   height: 50px;
   width: 50px;
@@ -276,6 +310,24 @@
   to {
     -webkit-transform: translateY(0);
             transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes opacity-change {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes opacity-change {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=style.css.map */

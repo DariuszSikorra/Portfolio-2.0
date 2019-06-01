@@ -25,6 +25,12 @@
   border-radius: 4px;
 }
 
+@mixin animator {
+  opacity: 0;
+  animation: opacity-change 2s ease forwards;
+  animation-delay: 1s;
+}
+
 * {
   body {
     margin: 0;
@@ -42,7 +48,7 @@
         height: 150px;
         padding: 30px;
         transition: transform 0.5s ease-out;
-        // opacity: 0;
+        @include animator;
       }
       img:hover {
         transform: scale(1.3);
@@ -50,13 +56,17 @@
       h1 {
         font-family: "Abril Fatface", cursive;
         padding: 10px;
-        transition: font-size 0.25s ease-out;
+        @include animator;
       }
-    //   h1:hover {
-    //     font-size: 3em;
-    //   }
       p {
         padding: 10px;
+        @include animator;
+      }
+      h2 {
+        @include animator;
+      }
+      table {
+        @include animator;
       }
     }
 
@@ -175,6 +185,14 @@
           display: none;
         }
       }
+      .desktop, .mobile {
+        a {
+          img {
+            width: 40px;
+            height: 40px;
+          }
+        }
+      }
       .toProjects {
         @include button;
         background-color: black;
@@ -186,15 +204,24 @@
 // }
 
 .slide-in {
-    animation: slide-in 1s ease forwards;
+  animation: slide-in 1s ease forwards;
 }
 
 @keyframes slide-in {
-    from {
-        transform: translateY(100vw);
-        visibility: visible;
-    }
-    to {
-        transform: translateY(0);
-    }
+  from {
+    transform: translateY(100vw);
+    visibility: visible;
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes opacity-change {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

@@ -1,19 +1,11 @@
-var image = document.querySelector('img')
-var title = document.querySelector('h1');
-var paragraph = document.querySelector('p');
-var table = document.querySelector('table');
+// var wrapper = document.querySelector("#barba-wrapper");
+// var image = document.querySelector('img')
+
 
 Barba.Pjax.start();
 
 var FadeTransition = Barba.BaseTransition.extend({
   start: function() {
-    /**
-     * This function is automatically called as soon the Transition starts
-     * this.newContainerLoading is a Promise for the loading of the new container
-     * (Barba.js also comes with an handy Promise polyfill!)
-     */
-
-    // As soon the loading is finished and the old page is faded out, let's fade the new page
     Promise.all([this.newContainerLoading, this.fadeOut()]).then(
       this.fadeIn.bind(this)
     );
@@ -42,9 +34,11 @@ Barba.Pjax.getTransition = function() {
   return FadeTransition;
 };
 
-// const loadContent = () => {
-//   image.style.transition = "opacity 2s ease-out";
-//   image.style.opacity = '1';
-// };
+//document.getElementById("demo").setAttribute(
+//   "style", "font-size: 100px; font-style: italic; color:#ff0000;");
 
-// document.addEventListener('click', loadContent() )
+// wrapper.addEventListener("animationend", function() {
+//     image.style.transition = "opacity 2s ease-out";
+//     image.style.opacity = "1";
+//     console.log('loaded');
+// });
