@@ -1,287 +1,589 @@
-* body {
-  margin: 0;
-  padding: 0;
-  text-align: center;
-  font-family: "Kodchasan", sans-serif;
-  overflow: hidden;
+@media only screen and (min-width: 320px) and (max-width: 991px) {
+  * body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: "Kodchasan", sans-serif;
+    overflow: hidden;
+  }
+  * body .block {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+  }
+  * body .block img {
+    border-radius: 50%;
+    width: 170px;
+    height: 170px;
+    margin: 35px;
+    -webkit-transition: -webkit-transform 0.5s ease-out;
+    transition: -webkit-transform 0.5s ease-out;
+    transition: transform 0.5s ease-out;
+    transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
+    opacity: 0;
+    -webkit-animation: opacity-change 1.8s ease forwards;
+            animation: opacity-change 1.8s ease forwards;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+    -webkit-animation-delay: 1.3s;
+            animation-delay: 1.3s;
+  }
+  * body .block img:hover {
+    -webkit-transform: scale(1.35);
+            transform: scale(1.35);
+  }
+  * body .block h1 {
+    font-family: "Abril Fatface", cursive;
+    padding: 10px;
+    opacity: 0;
+    -webkit-animation: opacity-change 1.8s ease forwards;
+            animation: opacity-change 1.8s ease forwards;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+    -webkit-animation-delay: 0.8s;
+            animation-delay: 0.8s;
+  }
+  * body .block p {
+    padding: 10px;
+    margin: auto;
+    max-width: 900px;
+    opacity: 0;
+    -webkit-animation: opacity-change 1.8s ease forwards;
+            animation: opacity-change 1.8s ease forwards;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+  }
+  * body .block h2 {
+    opacity: 0;
+    -webkit-animation: opacity-change 1.8s ease forwards;
+            animation: opacity-change 1.8s ease forwards;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+  }
+  * body .block table {
+    opacity: 0;
+    -webkit-animation: opacity-change 1.8s ease forwards;
+            animation: opacity-change 1.8s ease forwards;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+  }
+  * body #header {
+    background-color: black;
+    color: white;
+    top: 0;
+    width: 100vw;
+  }
+  * body #header .separator {
+    background-color: white;
+    margin: auto;
+    height: 4px;
+    width: 70vw;
+    border-radius: 4px;
+  }
+  * body #header .toSummary {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    border-radius: 50%;
+    left: calc(50vw - 25px);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    bottom: 40px;
+    background-color: white;
+  }
+  * body #summary {
+    background-color: white;
+    color: black;
+  }
+  * body #summary .separator {
+    background-color: black;
+    margin: auto;
+    height: 4px;
+    width: 70vw;
+    border-radius: 4px;
+  }
+  * body #summary .toHome {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    border-radius: 50%;
+    left: calc(50vw - 25px);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: black;
+    bottom: 70px;
+  }
+  * body #summary .toTechnologies {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    border-radius: 50%;
+    left: calc(50vw - 25px);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: black;
+    bottom: 10px;
+  }
+  * body #technologies {
+    background-color: black;
+    color: white;
+  }
+  * body #technologies .separator {
+    background-color: white;
+    margin: auto;
+    height: 4px;
+    width: 70vw;
+    border-radius: 4px;
+  }
+  * body #technologies table {
+    padding: 10px;
+    margin: 0 auto;
+  }
+  * body #technologies table th {
+    border-bottom: 2px solid white;
+  }
+  * body #technologies .toSummary {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    border-radius: 50%;
+    left: calc(50vw - 25px);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: white;
+    bottom: 70px;
+  }
+  * body #technologies .toInterests {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    border-radius: 50%;
+    left: calc(50vw - 25px);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: white;
+    bottom: 10px;
+  }
+  * body #interests {
+    background-color: white;
+    color: black;
+  }
+  * body #interests .separator {
+    background-color: black;
+    margin: auto;
+    height: 4px;
+    width: 70vw;
+    border-radius: 4px;
+  }
+  * body #interests .toTechnologies {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    border-radius: 50%;
+    left: calc(50vw - 25px);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: black;
+    bottom: 70px;
+  }
+  * body #interests .toProjects {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    border-radius: 50%;
+    left: calc(50vw - 25px);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: black;
+    bottom: 10px;
+  }
+  * body #projects {
+    background-color: black;
+    color: white;
+  }
+  * body #projects .separator {
+    background-color: white;
+    margin: auto;
+    height: 4px;
+    width: 70vw;
+    border-radius: 4px;
+  }
+  * body #projects a {
+    color: white;
+  }
+  * body #projects .toInterests {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    border-radius: 50%;
+    left: calc(50vw - 25px);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: white;
+    bottom: 70px;
+  }
+  * body #projects .toContact {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    border-radius: 50%;
+    left: calc(50vw - 25px);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: white;
+    bottom: 10px;
+  }
+  * body #contact {
+    background-color: white;
+    color: black;
+  }
+  * body #contact .separator {
+    background-color: black;
+    margin: auto;
+    height: 4px;
+    width: 70vw;
+    border-radius: 4px;
+  }
+  * body #contact .desktop {
+    display: none;
+  }
+  * body #contact .mobile {
+    text-align: left;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    display: inline;
+  }
+  * body #contact .mobile span {
+    display: none;
+  }
+  * body #contact .desktop a img, * body #contact .mobile a img {
+    width: 40px;
+    height: 40px;
+  }
+  * body #contact .toProjects {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    border-radius: 50%;
+    left: calc(50vw - 25px);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: black;
+    bottom: 40px;
+  }
 }
 
-* body .block {
-  height: 100vh;
-  width: 100vw;
-  position: absolute;
-}
-
-* body .block img {
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  padding: 30px;
-  -webkit-transition: -webkit-transform 0.5s ease-out;
-  transition: -webkit-transform 0.5s ease-out;
-  transition: transform 0.5s ease-out;
-  transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
-  opacity: 0;
-  -webkit-animation: opacity-change 2s ease forwards;
-          animation: opacity-change 2s ease forwards;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
-* body .block img:hover {
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
-}
-
-* body .block h1 {
-  font-family: "Abril Fatface", cursive;
-  padding: 10px;
-  opacity: 0;
-  -webkit-animation: opacity-change 2s ease forwards;
-          animation: opacity-change 2s ease forwards;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
-* body .block p {
-  padding: 10px;
-  opacity: 0;
-  -webkit-animation: opacity-change 2s ease forwards;
-          animation: opacity-change 2s ease forwards;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
-* body .block h2 {
-  opacity: 0;
-  -webkit-animation: opacity-change 2s ease forwards;
-          animation: opacity-change 2s ease forwards;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
-* body .block table {
-  opacity: 0;
-  -webkit-animation: opacity-change 2s ease forwards;
-          animation: opacity-change 2s ease forwards;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
-}
-
-* body #header {
-  background-color: black;
-  color: white;
-  top: 0;
-  width: 100vw;
-}
-
-* body #header .separator {
-  background-color: white;
-  margin: auto;
-  height: 4px;
-  width: 70vw;
-  border-radius: 4px;
-}
-
-* body #header .toSummary {
-  height: 50px;
-  width: 50px;
-  position: absolute;
-  border-radius: 50%;
-  left: calc(50vw - 25px);
-  bottom: 40px;
-  background-color: white;
-}
-
-* body #summary {
-  background-color: white;
-  color: black;
-}
-
-* body #summary .separator {
-  background-color: black;
-  margin: auto;
-  height: 4px;
-  width: 70vw;
-  border-radius: 4px;
-}
-
-* body #summary .toHome {
-  height: 50px;
-  width: 50px;
-  position: absolute;
-  border-radius: 50%;
-  left: calc(50vw - 25px);
-  background-color: black;
-  bottom: 70px;
-}
-
-* body #summary .toTechnologies {
-  height: 50px;
-  width: 50px;
-  position: absolute;
-  border-radius: 50%;
-  left: calc(50vw - 25px);
-  background-color: black;
-  bottom: 10px;
-}
-
-* body #technologies {
-  background-color: black;
-  color: white;
-}
-
-* body #technologies .separator {
-  background-color: white;
-  margin: auto;
-  height: 4px;
-  width: 70vw;
-  border-radius: 4px;
-}
-
-* body #technologies table {
-  padding: 10px;
-  margin: 0 auto;
-}
-
-* body #technologies table th {
-  border-bottom: 2px solid white;
-}
-
-* body #technologies .toSummary {
-  height: 50px;
-  width: 50px;
-  position: absolute;
-  border-radius: 50%;
-  left: calc(50vw - 25px);
-  background-color: white;
-  bottom: 70px;
-}
-
-* body #technologies .toInterests {
-  height: 50px;
-  width: 50px;
-  position: absolute;
-  border-radius: 50%;
-  left: calc(50vw - 25px);
-  background-color: white;
-  bottom: 10px;
-}
-
-* body #interests {
-  background-color: white;
-  color: black;
-}
-
-* body #interests .separator {
-  background-color: black;
-  margin: auto;
-  height: 4px;
-  width: 70vw;
-  border-radius: 4px;
-}
-
-* body #interests .toTechnologies {
-  height: 50px;
-  width: 50px;
-  position: absolute;
-  border-radius: 50%;
-  left: calc(50vw - 25px);
-  background-color: black;
-  bottom: 70px;
-}
-
-* body #interests .toProjects {
-  height: 50px;
-  width: 50px;
-  position: absolute;
-  border-radius: 50%;
-  left: calc(50vw - 25px);
-  background-color: black;
-  bottom: 10px;
-}
-
-* body #projects {
-  background-color: black;
-  color: white;
-}
-
-* body #projects .separator {
-  background-color: white;
-  margin: auto;
-  height: 4px;
-  width: 70vw;
-  border-radius: 4px;
-}
-
-* body #projects a {
-  color: white;
-}
-
-* body #projects .toInterests {
-  height: 50px;
-  width: 50px;
-  position: absolute;
-  border-radius: 50%;
-  left: calc(50vw - 25px);
-  background-color: white;
-  bottom: 70px;
-}
-
-* body #projects .toContact {
-  height: 50px;
-  width: 50px;
-  position: absolute;
-  border-radius: 50%;
-  left: calc(50vw - 25px);
-  background-color: white;
-  bottom: 10px;
-}
-
-* body #contact {
-  background-color: white;
-  color: black;
-}
-
-* body #contact .separator {
-  background-color: black;
-  margin: auto;
-  height: 4px;
-  width: 70vw;
-  border-radius: 4px;
-}
-
-* body #contact .desktop {
-  display: none;
-}
-
-* body #contact .mobile {
-  text-align: left;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  display: inline;
-}
-
-* body #contact .mobile span {
-  display: none;
-}
-
-* body #contact .desktop a img, * body #contact .mobile a img {
-  width: 40px;
-  height: 40px;
-}
-
-* body #contact .toProjects {
-  height: 50px;
-  width: 50px;
-  position: absolute;
-  border-radius: 50%;
-  left: calc(50vw - 25px);
-  background-color: black;
-  bottom: 40px;
+@media only screen and (min-width: 992px) {
+  * body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: "Kodchasan", sans-serif;
+    overflow: hidden;
+  }
+  * body .block {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50vw 50vw;
+        grid-template-columns: 50vw 50vw;
+    -ms-grid-rows: 1fr 1fr 1fr 20vh;
+        grid-template-rows: 1fr 1fr 1fr 20vh;
+  }
+  * body .block .sectionOne {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    display: block;
+    margin: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  * body .block .sectionOne img {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    margin: 35px;
+    -webkit-transition: -webkit-transform 0.5s ease-out;
+    transition: -webkit-transform 0.5s ease-out;
+    transition: transform 0.5s ease-out;
+    transition: transform 0.5s ease-out, -webkit-transform 0.5s ease-out;
+    opacity: 0;
+    -webkit-animation: opacity-change 1.8s ease forwards;
+            animation: opacity-change 1.8s ease forwards;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+    -webkit-animation-delay: 1.3s;
+            animation-delay: 1.3s;
+  }
+  * body .block .sectionOne img:hover {
+    -webkit-transform: scale(1.35);
+            transform: scale(1.35);
+  }
+  * body .block .sectionTwo {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    display: block;
+    margin: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  * body .block .sectionTwo h1 {
+    font-family: "Abril Fatface", cursive;
+    padding: 10px;
+    opacity: 0;
+    -webkit-animation: opacity-change 1.8s ease forwards;
+            animation: opacity-change 1.8s ease forwards;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+    -webkit-animation-delay: 0.8s;
+            animation-delay: 0.8s;
+  }
+  * body .block .sectionTwo p {
+    padding: 10px;
+    margin: auto;
+    max-width: 45vw;
+    opacity: 0;
+    -webkit-animation: opacity-change 1.8s ease forwards;
+            animation: opacity-change 1.8s ease forwards;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+  }
+  * body .block .sectionTwo h2 {
+    opacity: 0;
+    -webkit-animation: opacity-change 1.8s ease forwards;
+            animation: opacity-change 1.8s ease forwards;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+  }
+  * body .block .sectionTwo table {
+    opacity: 0;
+    -webkit-animation: opacity-change 1.8s ease forwards;
+            animation: opacity-change 1.8s ease forwards;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+  }
+  * body .block .sectionThree {
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 1;
+    grid-row: 4 / 5;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-column: 1 / 3;
+  }
+  * body #header {
+    background-color: black;
+    color: white;
+    top: 0;
+    width: 100vw;
+  }
+  * body #header .sectionTwo {
+    position: initial;
+  }
+  * body #header .sectionTwo .separator {
+    background-color: white;
+    margin: auto;
+    height: 4px;
+    width: 40vw;
+    border-radius: 4px;
+  }
+  * body #header .toSummary {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    border-radius: 50%;
+    left: calc(50vw - 25px);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    bottom: 40px;
+    background-color: white;
+  }
+  * body #summary {
+    background-color: white;
+    color: black;
+  }
+  * body #summary .separator {
+    background-color: black;
+    margin: auto;
+    height: 4px;
+    width: 40vw;
+    border-radius: 4px;
+  }
+  * body #summary .toHome {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    border-radius: 50%;
+    left: calc(50vw - 25px);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: black;
+    bottom: 70px;
+  }
+  * body #summary .toTechnologies {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    border-radius: 50%;
+    left: calc(50vw - 25px);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: black;
+    bottom: 10px;
+  }
+  * body #technologies {
+    background-color: black;
+    color: white;
+  }
+  * body #technologies .separator {
+    background-color: white;
+    margin: auto;
+    height: 4px;
+    width: 40vw;
+    border-radius: 4px;
+  }
+  * body #technologies table {
+    padding: 10px;
+    margin: 0 auto;
+  }
+  * body #technologies table th {
+    border-bottom: 2px solid white;
+  }
+  * body #technologies .toSummary {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    border-radius: 50%;
+    left: calc(50vw - 25px);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: white;
+    bottom: 70px;
+  }
+  * body #technologies .toInterests {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    border-radius: 50%;
+    left: calc(50vw - 25px);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: white;
+    bottom: 10px;
+  }
+  * body #interests {
+    background-color: white;
+    color: black;
+  }
+  * body #interests .separator {
+    background-color: black;
+    margin: auto;
+    height: 4px;
+    width: 40vw;
+    border-radius: 4px;
+  }
+  * body #interests .toTechnologies {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    border-radius: 50%;
+    left: calc(50vw - 25px);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: black;
+    bottom: 70px;
+  }
+  * body #interests .toProjects {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    border-radius: 50%;
+    left: calc(50vw - 25px);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: black;
+    bottom: 10px;
+  }
+  * body #projects {
+    background-color: black;
+    color: white;
+  }
+  * body #projects .separator {
+    background-color: white;
+    margin: auto;
+    height: 4px;
+    width: 40vw;
+    border-radius: 4px;
+  }
+  * body #projects a {
+    color: white;
+  }
+  * body #projects .toInterests {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    border-radius: 50%;
+    left: calc(50vw - 25px);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: white;
+    bottom: 70px;
+  }
+  * body #projects .toContact {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    border-radius: 50%;
+    left: calc(50vw - 25px);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: white;
+    bottom: 10px;
+  }
+  * body #contact {
+    background-color: white;
+    color: black;
+  }
+  * body #contact .separator {
+    background-color: black;
+    margin: auto;
+    height: 4px;
+    width: 40vw;
+    border-radius: 4px;
+  }
+  * body #contact .desktop {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  * body #contact .mobile {
+    display: none;
+  }
+  * body #contact .desktop {
+    width: 700px;
+    margin: auto;
+  }
+  * body #contact .desktop a {
+    text-decoration: none;
+    color: black;
+  }
+  * body #contact .desktop a img {
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    padding: 0;
+  }
+  * body #contact .toProjects {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    border-radius: 50%;
+    left: calc(50vw - 25px);
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: black;
+    bottom: 40px;
+  }
 }
 
 .slide-in {
@@ -291,8 +593,8 @@
 
 @-webkit-keyframes slide-in {
   from {
-    -webkit-transform: translateY(100vw);
-            transform: translateY(100vw);
+    -webkit-transform: translateY(100vh);
+            transform: translateY(100vh);
     visibility: visible;
   }
   to {
@@ -303,8 +605,8 @@
 
 @keyframes slide-in {
   from {
-    -webkit-transform: translateY(100vw);
-            transform: translateY(100vw);
+    -webkit-transform: translateY(100vh);
+            transform: translateY(100vh);
     visibility: visible;
   }
   to {
@@ -328,6 +630,24 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes button-opacity {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.6;
+  }
+}
+
+@keyframes button-opacity {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.6;
   }
 }
 /*# sourceMappingURL=style.css.map */

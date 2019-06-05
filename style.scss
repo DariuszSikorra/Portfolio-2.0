@@ -1,207 +1,451 @@
-// @media only screen and (min-width: 320px) and (max-width: 991px){
+@media only screen and (min-width: 320px) and (max-width: 991px){
 
-@mixin backgroundIsBlack {
-  background-color: black;
-  color: white;
-}
+  @mixin backgroundIsBlack {
+    background-color: black;
+    color: white;
+  }
 
-@mixin backgroundIsWhite {
-  background-color: white;
-  color: black;
-}
+  @mixin backgroundIsWhite {
+    background-color: white;
+    color: black;
+  }
 
-@mixin button {
-  height: 50px;
-  width: 50px;
-  position: absolute;
-  border-radius: 50%;
-  left: calc(50vw - 25px);
-}
+  @mixin button {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    border-radius: 50%;
+    left: calc(50vw - 25px);
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+  }
 
-@mixin separator {
-  margin: auto;
-  height: 4px;
-  width: 70vw;
-  border-radius: 4px;
-}
+  @mixin separator {
+    margin: auto;
+    height: 4px;
+    width: 70vw;
+    border-radius: 4px;
+  }
 
-@mixin animator {
-  opacity: 0;
-  animation: opacity-change 2s ease forwards;
-  animation-delay: 1s;
-}
+  @mixin animator {
+    opacity: 0;
+    animation: opacity-change 1.8s ease forwards;
+    animation-delay: 1s;
+  }
 
-* {
-  body {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    font-family: "Kodchasan", sans-serif;
-    overflow: hidden;
-    .block {
-      height: 100vh;
-      width: 100vw;
-      position: absolute;
-      img {
-        border-radius: 50%;
-        width: 150px;
-        height: 150px;
-        padding: 30px;
-        transition: transform 0.5s ease-out;
-        @include animator;
-      }
-      img:hover {
-        transform: scale(1.3);
-      }
-      h1 {
-        font-family: "Abril Fatface", cursive;
-        padding: 10px;
-        @include animator;
-      }
-      p {
-        padding: 10px;
-        @include animator;
-      }
-      h2 {
-        @include animator;
-      }
-      table {
-        @include animator;
-      }
-    }
-
-    #header {
-      @include backgroundIsBlack;
-      top: 0;
-      width: 100vw;
-      .separator {
-        background-color: white;
-        @include separator();
-      }
-      .toSummary {
-        @include button();
-        bottom: 40px;
-        background-color: white;
-      }
-    }
-
-    #summary {
-      @include backgroundIsWhite;
-      .separator {
-        background-color: black;
-        @include separator();
-      }
-      .toHome {
-        @include button;
-        background-color: black;
-        bottom: 70px;
-      }
-      .toTechnologies {
-        @include button;
-        background-color: black;
-        bottom: 10px;
-      }
-    }
-
-    #technologies {
-      @include backgroundIsBlack;
-      .separator {
-        background-color: white;
-        @include separator();
-      }
-      table {
-        padding: 10px;
-        margin: 0 auto;
-        th {
-          border-bottom: 2px solid white;
+  * {
+    body {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      font-family: "Kodchasan", sans-serif;
+      overflow: hidden;
+      .block {
+        height: 100vh;
+        width: 100vw;
+        position: absolute;
+        img {
+          border-radius: 50%;
+          width: 170px;
+          height: 170px;
+          margin: 35px;
+          // border: 2px solid black;
+          transition: transform 0.5s ease-out;
+          @include animator;
+          animation-delay: 1.3s;
+        }
+        img:hover {
+          transform: scale(1.35);
+        }
+        h1 {
+          font-family: "Abril Fatface", cursive;
+          padding: 10px;
+          @include animator;
+            animation-delay: 0.8s;
+        }
+        p {
+          padding: 10px;
+          margin: auto;
+          max-width: 900px;
+          @include animator;
+        }
+        h2 {
+          @include animator;
+        }
+        table {
+          @include animator;
         }
       }
-      .toSummary {
-        @include button;
-        background-color: white;
-        bottom: 70px;
-      }
-      .toInterests {
-        @include button;
-        background-color: white;
-        bottom: 10px;
-      }
-    }
 
-    #interests {
-      @include backgroundIsWhite;
-      .separator {
-        background-color: black;
-        @include separator();
-      }
-      .toTechnologies {
-        @include button;
-        background-color: black;
-        bottom: 70px;
-      }
-      .toProjects {
-        @include button;
-        background-color: black;
-        bottom: 10px;
-      }
-    }
-
-    #projects {
-      @include backgroundIsBlack;
-      .separator {
-        background-color: white;
-        @include separator();
-      }
-      a {
-        color: white;
-      }
-      .toInterests {
-        @include button;
-        background-color: white;
-        bottom: 70px;
-      }
-      .toContact {
-        @include button;
-        background-color: white;
-        bottom: 10px;
-      }
-    }
-
-    #contact {
-      @include backgroundIsWhite;
-      .separator {
-        background-color: black;
-        @include separator();
-      }
-      .desktop {
-        display: none;
-      }
-      .mobile {
-        text-align: left;
-        justify-content: center;
-        align-content: center;
-        display: inline;
-        span {
-          display: none;
+      #header {
+        @include backgroundIsBlack;
+        top: 0;
+        width: 100vw;
+        .separator {
+          background-color: white;
+          @include separator();
+        }
+        .toSummary {
+          @include button();
+          bottom: 40px;
+          background-color: white;
         }
       }
-      .desktop, .mobile {
-        a {
-          img {
-            width: 40px;
-            height: 40px;
+
+      #summary {
+        @include backgroundIsWhite;
+        .separator {
+          background-color: black;
+          @include separator();
+        }
+        .toHome {
+          @include button;
+          background-color: black;
+          bottom: 70px;
+        }
+        .toTechnologies {
+          @include button;
+          background-color: black;
+          bottom: 10px;
+        }
+      }
+
+      #technologies {
+        @include backgroundIsBlack;
+        .separator {
+          background-color: white;
+          @include separator();
+        }
+        table {
+          padding: 10px;
+          margin: 0 auto;
+          th {
+            border-bottom: 2px solid white;
           }
         }
+        .toSummary {
+          @include button;
+          background-color: white;
+          bottom: 70px;
+        }
+        .toInterests {
+          @include button;
+          background-color: white;
+          bottom: 10px;
+        }
       }
-      .toProjects {
-        @include button;
-        background-color: black;
-        bottom: 40px;
+
+      #interests {
+        @include backgroundIsWhite;
+        .separator {
+          background-color: black;
+          @include separator();
+        }
+        .toTechnologies {
+          @include button;
+          background-color: black;
+          bottom: 70px;
+        }
+        .toProjects {
+          @include button;
+          background-color: black;
+          bottom: 10px;
+        }
+      }
+
+      #projects {
+        @include backgroundIsBlack;
+        .separator {
+          background-color: white;
+          @include separator();
+        }
+        a {
+          color: white;
+        }
+        .toInterests {
+          @include button;
+          background-color: white;
+          bottom: 70px;
+        }
+        .toContact {
+          @include button;
+          background-color: white;
+          bottom: 10px;
+        }
+      }
+
+      #contact {
+        @include backgroundIsWhite;
+        .separator {
+          background-color: black;
+          @include separator();
+        }
+        .desktop {
+          display: none;
+        }
+        .mobile {
+          text-align: left;
+          justify-content: center;
+          align-content: center;
+          display: inline;
+          span {
+            display: none;
+          }
+        }
+        .desktop, .mobile {
+          a {
+            img {
+              width: 40px;
+              height: 40px;
+            }
+          }
+        }
+        .toProjects {
+          @include button;
+          background-color: black;
+          bottom: 40px;
+        }
       }
     }
   }
 }
-// }
+
+@media only screen and (min-width: 992px) {
+  
+  @mixin backgroundIsBlack {
+    background-color: black;
+    color: white;
+  }
+
+  @mixin backgroundIsWhite {
+    background-color: white;
+    color: black;
+  }
+
+  @mixin button {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    border-radius: 50%;
+    left: calc(50vw - 25px);
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+  }
+
+  @mixin separator {
+    margin: auto;
+    height: 4px;
+    width: 40vw;
+    border-radius: 4px;
+  }
+
+  @mixin animator {
+    opacity: 0;
+    animation: opacity-change 1.8s ease forwards;
+    animation-delay: 1s;
+  }
+
+  * {
+    body {
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      font-family: "Kodchasan", sans-serif;
+      overflow: hidden;
+      .block {
+        height: 100vh;
+        width: 100vw;
+        position: absolute;
+        display: grid;
+        grid-template-columns: 50vw 50vw;
+        grid-template-rows: 1fr 1fr 1fr 20vh;
+        .sectionOne {
+          grid-row: 2 / 3;
+          grid-column: 2 / 3;
+          display: block;
+          margin: auto;
+          justify-content: center;
+          align-content: center;
+          img {
+            border-radius: 50%;
+            width: 250px;
+            height: 250px;
+            margin: 35px;
+            // border: 2px solid black;
+            transition: transform 0.5s ease-out;
+            @include animator;
+            animation-delay: 1.3s;
+          }
+          img:hover {
+            transform: scale(1.35);
+          }
+        }
+        .sectionTwo {
+          grid-row: 2 / 3;
+          grid-column: 1 / 2;
+          display: block;
+          margin: auto;
+          justify-content: center;
+          align-content: center;
+          h1 {
+            font-family: "Abril Fatface", cursive;
+            padding: 10px;
+            @include animator;
+            animation-delay: 0.8s;
+          }
+          p {
+            padding: 10px;
+            margin: auto;
+            max-width: 45vw;
+            @include animator;
+          }
+          h2 {
+            @include animator;
+          }
+          table {
+            @include animator;
+          }
+        }
+        .sectionThree {
+          grid-row: 4 / 5;
+          grid-column: 1 / 3;
+        }
+      }
+
+      #header {
+        @include backgroundIsBlack;
+        top: 0;
+        width: 100vw;
+        .sectionTwo {
+          position: initial;
+          .separator {
+            background-color: white;
+            @include separator();
+          }
+        }
+        .toSummary {
+          @include button();
+          bottom: 40px;
+          background-color: white;
+        }
+      }
+
+      #summary {
+        @include backgroundIsWhite;
+        .separator {
+          background-color: black;
+          @include separator();
+        }
+        .toHome {
+          @include button;
+          background-color: black;
+          bottom: 70px;
+        }
+        .toTechnologies {
+          @include button;
+          background-color: black;
+          bottom: 10px;
+        }
+      }
+
+      #technologies {
+        @include backgroundIsBlack;
+        .separator {
+          background-color: white;
+          @include separator();
+        }
+        table {
+          padding: 10px;
+          margin: 0 auto;
+          th {
+            border-bottom: 2px solid white;
+          }
+        }
+        .toSummary {
+          @include button;
+          background-color: white;
+          bottom: 70px;
+        }
+        .toInterests {
+          @include button;
+          background-color: white;
+          bottom: 10px;
+        }
+      }
+
+      #interests {
+        @include backgroundIsWhite;
+        .separator {
+          background-color: black;
+          @include separator();
+        }
+        .toTechnologies {
+          @include button;
+          background-color: black;
+          bottom: 70px;
+        }
+        .toProjects {
+          @include button;
+          background-color: black;
+          bottom: 10px;
+        }
+      }
+
+      #projects {
+        @include backgroundIsBlack;
+        .separator {
+          background-color: white;
+          @include separator();
+        }
+        a {
+          color: white;
+        }
+        .toInterests {
+          @include button;
+          background-color: white;
+          bottom: 70px;
+        }
+        .toContact {
+          @include button;
+          background-color: white;
+          bottom: 10px;
+        }
+      }
+
+      #contact {
+        @include backgroundIsWhite;
+        .separator {
+          background-color: black;
+          @include separator();
+        }
+        .desktop {
+          display: grid;
+          justify-content: center;
+        }
+        .mobile {
+          display: none;
+        }
+        .desktop {
+          width: 700px;
+          margin: auto;
+          a {
+            text-decoration: none;
+            color: black;
+            img {
+              width: 40px;
+              height: 40px;
+              margin: 10px;
+              padding: 0;
+            }
+          }
+        }
+        .toProjects {
+          @include button;
+          background-color: black;
+          bottom: 40px;
+        }
+      }
+    }
+  }
+}
 
 .slide-in {
   animation: slide-in 1s ease forwards;
@@ -209,7 +453,7 @@
 
 @keyframes slide-in {
   from {
-    transform: translateY(100vw);
+    transform: translateY(100vh);
     visibility: visible;
   }
   to {
@@ -223,5 +467,14 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes button-opacity {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.6;
   }
 }
